@@ -1,5 +1,10 @@
 <?php
 	require 'dbpdo.php';
+	require 'authenticate.php';
+	$user = sc_get_user($_SERVER);
+	if(!$user) {
+		die("Authentication failed");
+	}
 	header('Content-Type: text/html');
 	$sql = "";
 	try {

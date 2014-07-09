@@ -17,6 +17,10 @@
 	text-decoration: none;
 }
 
+.navigation li {
+	font-size: 11px;
+}
+
 /* Body hierarchy */
 .about-bg {
 	clear: both;

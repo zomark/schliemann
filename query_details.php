@@ -2,6 +2,11 @@
 	header('Content-Type: text/html');
 	require 'dbpdo.php';
 	require 'media.php';
+	require 'authenticate.php';
+	$user = sc_get_user($_SERVER);
+	if(!$user) {
+		die("Authentication failed");
+	}
 	try {
 		$db = new MyDB();
 		if(!$db){

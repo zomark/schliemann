@@ -1,3 +1,11 @@
+<?php
+require 'authenticate.php';
+$user = sc_get_user($_SERVER);
+if(!$user) {
+	die("Authentication failed");
+}
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -38,7 +46,7 @@
 			<ul id="nav" class="navigation">
 				<li><a href="http://www.ascsa.edu.gr/index.php/archives/heinrich-schliemann-finding-aid/">ACSCA Finding Aids</a>
 				<li><a href="doc/schliemann_correspondence_doc.pdf">/&nbsp;Project Documentation</a>
-				</li>
+				<li>/&nbsp;Welcome, <span id="username"><?php echo $user;?></span></li>
 			</ul>
 			<ul class="gateway"></ul>
 		</div>
@@ -178,3 +186,4 @@
 	</div>
 </body>
 </html>
+
