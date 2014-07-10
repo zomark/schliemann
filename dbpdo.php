@@ -93,11 +93,11 @@
 			$clauses[] = "r.id = items.receiver_id";
 			$clauses[] = "places.id = items.place_id";
 
-			error_log(print_r($clauses, true));
+			//error_log(print_r($clauses, true));
 				
 			//Assemble
 			$retval = implode(" and ", $clauses);
-			error_log("Returning $retval");
+			//error_log("Returning $retval");
 			return $retval;
 		}
 

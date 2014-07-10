@@ -57,7 +57,7 @@ function http_digest_parse($txt)
     $data = array();
     $keys = implode('|', array_keys($needed_parts));
 	
-	error_log("Parsing $txt against $keys");
+	//error_log("Parsing $txt against $keys");
 
     preg_match_all('@(' . $keys . ')=(?:([\'"])([^\2]+?)\2|([^\s,]+))@', $txt, $matches, PREG_SET_ORDER);
 

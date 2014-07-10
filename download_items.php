@@ -28,7 +28,7 @@
 			}
 			$sql .= " order by items.date_sort";
 			
-			error_log("download_items: ".$sql);
+			//error_log("download_items: ".$sql);
 
 
 			// $sql = "";

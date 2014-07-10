@@ -83,7 +83,7 @@
 				// $sql .= "order by items.copybook";
 			// }
 
-			error_log("query_copybook: ".$sql);
+			//error_log("query_copybook: ".$sql);
 			echo "<option value='0'>Any</option>";
 			$result = $db->query($sql);
 			if(isset($result)) {
