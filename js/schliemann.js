@@ -329,7 +329,7 @@ $(function() {
 	$("#reset-correspondent").click(function() {
 		$("#partner").val("");
 		$("#partner").focus();
-		$("#letterType_both").prop("checked", true);
+		$("#letterType_both").click();
 		updateSectionCorrespondent();
 		updateSearch();
 	});
