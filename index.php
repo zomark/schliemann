@@ -126,7 +126,7 @@ if(!$user) {
 					</div>
 
 					<!-- Options -->
-					<div id="section-options" class="section" id="section_options">
+					<div id="section-options" class="section">
 						<h3>Options:</h3>
 						<input type="checkbox" name="check_digitized" id="check_digitized"/>
 						<label id="label_digitized" for="check_digitized">Available online</label>

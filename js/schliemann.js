@@ -58,6 +58,17 @@ function updateSectionCorrespondent() {
 	}
 }
 
+//Update the dates section after query parameters have been changed
+function updateSectionPlace() {
+	if($("#place").val().trim().length) {
+		$("#section-place").addClass("sectionActive");
+	}
+	else {
+		$("#section-place").removeClass("sectionActive");
+	}
+}
+
+
 //Ajax call to query_partners.php
 //The returned array builds the autocomplete list for the names field
 function queryPartners(request, callback) {
@@ -338,31 +349,34 @@ $(function() {
 		.click(function() {
 			$("#partner").val("");
 			$("#partner").focus();
+			updateSectionCorrespondent();
 			updateSearch();
 		});
 
 	//The place:
 	//autocompletion
-	$("#place").autocomplete({
+	$("#place")
+	.change(function() {
+		updateSectionPlace();
+	})
+	.autocomplete({
 		source: queryPlaces,
 		delay: 300,
 		close: function(event, ui) {
+			updateSectionPlace();
 			updateSearch();
 			queryCopybook();
 			queryBox();
 		}
 	})
-	.data("ui-autocomplete")._renderItem = renderItemWithCount; /*function(ul, item) {
-		return $("<li>")
-			.append("<div class=\"item_label\"><a>" + item.label + "</a></div><div class=\"item_count\"><span>" + item.count + "</span></div>")
-			.appendTo(ul);
-	};*/
+	.data("ui-autocomplete")._renderItem = renderItemWithCount;
 	//Show/hide help
 	$("#place").focus(function(e) {
 		showHelp("help-place");
 	});
 	$("#place").blur(function(e) {
 		hideHelp();
+		updateSectionPlace();
 		updateSearch();
 		queryCopybook();
 		queryBox();
@@ -389,6 +403,7 @@ $(function() {
 		.click(function() {
 			$("#place").val("");
 			$("#place").focus();
+			updateSectionPlace();
 			updateSearch();
 		});
 
@@ -663,7 +678,7 @@ $(function() {
 	});
 	
 	//Buttonize options
-	$("#section_options").buttonset();
+	$("#section-options").buttonset();
 	$("#check_digitized").click(function() {
 		updateSearch();
 		queryCopybook();
