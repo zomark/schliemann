@@ -87,7 +87,7 @@ if(!$user) {
 
 					<!-- Correspondent -->
 					<div id="section-correspondent" class="section">
-						<button id="reset-dates" class="button-reset">Reset</button>
+						<button id="reset-correnspondent" class="button-reset">Reset</button>
 						<div class="section-contents">
 							<h3>Correspondent:</h3>
 							<div class="option">
@@ -123,14 +123,13 @@ if(!$user) {
 
 					<!-- Place -->
 					<div id="section-place" class="section">
-						<button id="reset-dates" class="button-reset">Reset</button>
+						<button id="reset-place" class="button-reset">Reset</button>
 						<div class="section-contents">
 							<h3>Place:</h3>
-							<button id="reset-places" class="button-reset">Reset</button>
 							<div class="option">
 								<input type="text" name ="place" id="place"/>
 								<button id="all_places">Show all</button>
-								<button id="reset_places">Reset</button>
+								<!--button id="reset_places">Reset</button-->
 							</div>
 						</div>
 						<div style="clear: both;"></div>
@@ -138,7 +137,7 @@ if(!$user) {
 
 					<!-- Options -->
 					<div id="section-options" class="section">
-						<button id="reset-dates" class="button-reset">Reset</button>
+						<button id="reset-options" class="button-reset">Reset</button>
 						<div class="section-contents">
 							<h3>Options:</h3>
 							<input type="checkbox" name="check_digitized" id="check_digitized"/>
