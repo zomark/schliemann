@@ -96,7 +96,7 @@ button.ui-button-icon-only {
 	padding: 0;
 }
 
-#inout_buttons .ui-button-text-only .ui-button-text, #section_options .ui-button-text-only .ui-button-text {
+#inout_buttons .ui-button-text-only .ui-button-text, #section-options .ui-button-text-only .ui-button-text {
 	padding: 0.1em 0.4em;
 	font-weight: normal;
 }
