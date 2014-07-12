@@ -50,7 +50,7 @@ function updateSectionDate() {
 
 //Update the dates section after query parameters have been changed
 function updateSectionCorrespondent() {
-	if($("#partner").val().trim()) {
+	if($("#partner").val().trim().length) {
 		$("#section-correspondent").addClass("sectionActive");
 	}
 	else {
@@ -311,6 +311,7 @@ $(function() {
 	});
 	$("#partner").blur(function(e) {
 		hideHelp();
+		updateSectionCorrespondent();
 		updateSearch();
 		queryCopybook();
 		queryBox();
