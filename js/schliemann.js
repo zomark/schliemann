@@ -307,6 +307,14 @@ $(function() {
 		}
 	});
 	
+	//Reset buttons
+	$(".button-reset")
+	.button({
+		icons: {
+			primary: "ui-icon-close"
+		},
+		text: false
+	});
 
 	//The correspondent's name:
 	//autocompletion
