@@ -141,7 +141,6 @@ if(!$user) {
 						<button id="reset-dates" class="button-reset">Reset</button>
 						<div class="section-contents">
 							<h3>Options:</h3>
-							<button id="reset-options" class="button-reset">Reset</button>
 							<input type="checkbox" name="check_digitized" id="check_digitized"/>
 							<label id="label_digitized" for="check_digitized">Available online</label>
 						</div>

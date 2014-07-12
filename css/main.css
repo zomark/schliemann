@@ -93,8 +93,14 @@
 
 /* Buttons */
 .button-reset {
+	display: none;
 	float: right;
 }
+
+.sessionActive .button-reset {
+	display: block;
+}
+
 
 button.ui-button-icon-only {
 	width: 18px;
