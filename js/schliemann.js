@@ -290,9 +290,9 @@ $(function() {
 	//The correspondent's name:
 	//autocompletion
 	$("#partner")
-	.change(function() {
-		updateSectionCorrespondent();
-	})
+//	.change(function() {
+//		updateSectionCorrespondent();
+//	})
 	.autocomplete({
 		source: queryPartners,
 		delay: 300,
