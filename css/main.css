@@ -42,9 +42,12 @@
 	padding: 8px;
 }
 .section h3 {
-	float: left;
 	margin-left: 0;
 	margin-bottom: .5em;
+}
+
+.section-contents {
+	float: left;
 }
 
 .sectionActive {

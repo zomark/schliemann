@@ -61,55 +61,60 @@ if(!$user) {
 				<div class="query">
 					<!-- Date range -->
 					<div id="section-dates" class="section dates">
-						<div class="date date_from">
-							<h3>Written between...</h3>
-							<button id="reset-dates" class="button-reset">Reset</button>
-							<input type="text" name ="date_from" id="date_from"/>
-							<button id="show_from">Show calendar</button>
-							<button id="reset_from">Reset</button>
-							<button id="copy_from">Set as end date</button>
-						</div>
-						<div class="date date_to">
-							<h3>...and:</h3>
-							<input type="text" name ="date_to" id="date_to"/>
-							<button id="show_to">Show calendar</button>
-							<button id="reset_to">Reset</button>
-							<button id="copy_to">Set as start date</button>
+						<button id="reset-dates" class="button-reset">Reset</button>
+						<div class="section-contents">
+							<div class="date date_from">
+								<h3>Written between...</h3>
+								<input type="text" name ="date_from" id="date_from"/>
+								<button id="show_from">Show calendar</button>
+								<button id="reset_from">Reset</button>
+								<button id="copy_from">Set as end date</button>
+							</div>
+							<div class="date date_to">
+								<h3>...and:</h3>
+								<input type="text" name ="date_to" id="date_to"/>
+								<button id="show_to">Show calendar</button>
+								<button id="reset_to">Reset</button>
+								<button id="copy_to">Set as start date</button>
+							</div>
+							<div style="clear: both;"></div>
+							<div id="slider_container">
+								<div id="slider_dates"></div>
+							</div>
 						</div>
 						<div style="clear: both;"></div>
-						<div id="slider_container">
-							<div id="slider_dates"></div>
-						</div>
 					</div>
 
 					<!-- Correspondent -->
 					<div id="section-correspondent" class="section">
-						<h3>Correspondent:</h3>
-						<button id="reset-correspondents" class="button-reset">Reset</button>
-						<div class="option">
-							<input type="text" name ="partner" id="partner"/>
-							<button id="all_correspondents">Show all</button>
-							<button id="reset_correspondents">Reset</button>
-						</div>
-						<div class="inout">
-							<div id="inout_buttons">
-								<input type="radio" name="letterType" id="letterType_out" value="out"/>
-								<label for="letterType_out">outgoing</label>
-								<input type="radio" name="letterType" id="letterType_in" value="in"/>
-								<label for="letterType_in">incoming</label>
-								<input type="radio" name="letterType" id="letterType_both" value="both" checked="checked"/>
-								<label for="letterType_both">both</label>
+						<button id="reset-dates" class="button-reset">Reset</button>
+						<div class="section-contents">
+							<h3>Correspondent:</h3>
+							<div class="option">
+								<input type="text" name ="partner" id="partner"/>
+								<button id="all_correspondents">Show all</button>
+								<button id="reset_correspondents">Reset</button>
 							</div>
-							<div class="location">
-								<div class="option" id="copybook">
-									<label id="label_copybook" for="num_copybook">Copybook:</label>
-									<select name="copybook" id="num_copybook" size="1">
-									</select>
+							<div class="inout">
+								<div id="inout_buttons">
+									<input type="radio" name="letterType" id="letterType_out" value="out"/>
+									<label for="letterType_out">outgoing</label>
+									<input type="radio" name="letterType" id="letterType_in" value="in"/>
+									<label for="letterType_in">incoming</label>
+									<input type="radio" name="letterType" id="letterType_both" value="both" checked="checked"/>
+									<label for="letterType_both">both</label>
 								</div>
-								<div class="option" id="box">
-									<label id="label_box" for="num_box">Box:</label>
-									<select name="box" id="num_box" size="1">
-									</select>
+								<div class="location">
+									<div class="option" id="copybook">
+										<label id="label_copybook" for="num_copybook">Copybook:</label>
+										<select name="copybook" id="num_copybook" size="1">
+										</select>
+									</div>
+									<div class="option" id="box">
+										<label id="label_box" for="num_box">Box:</label>
+										<select name="box" id="num_box" size="1">
+										</select>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -118,22 +123,29 @@ if(!$user) {
 
 					<!-- Place -->
 					<div id="section-place" class="section">
-						<h3>Place:</h3>
-						<button id="reset-places" class="button-reset">Reset</button>
-						<div class="option">
-							<input type="text" name ="place" id="place"/>
-							<button id="all_places">Show all</button>
-							<button id="reset_places">Reset</button>
+						<button id="reset-dates" class="button-reset">Reset</button>
+						<div class="section-contents">
+							<h3>Place:</h3>
+							<button id="reset-places" class="button-reset">Reset</button>
+							<div class="option">
+								<input type="text" name ="place" id="place"/>
+								<button id="all_places">Show all</button>
+								<button id="reset_places">Reset</button>
+							</div>
 						</div>
 						<div style="clear: both;"></div>
 					</div>
 
 					<!-- Options -->
 					<div id="section-options" class="section">
-						<h3>Options:</h3>
-						<button id="reset-options" class="button-reset">Reset</button>
-						<input type="checkbox" name="check_digitized" id="check_digitized"/>
-						<label id="label_digitized" for="check_digitized">Available online</label>
+						<button id="reset-dates" class="button-reset">Reset</button>
+						<div class="section-contents">
+							<h3>Options:</h3>
+							<button id="reset-options" class="button-reset">Reset</button>
+							<input type="checkbox" name="check_digitized" id="check_digitized"/>
+							<label id="label_digitized" for="check_digitized">Available online</label>
+						</div>
+						<div style="clear: both;"></div>
 					</div>
 
 				</div>
