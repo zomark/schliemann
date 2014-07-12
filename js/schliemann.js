@@ -49,14 +49,14 @@ function updateSectionDate() {
 }
 
 //Update the dates section after query parameters have been changed
-// function updateSectionCorrespondent() {
-	// $("#partner").val().trim()) {
-		// $("#section-correspondent").addClass("sectionActive");
-	// }
-	// else {
-		// $("#section-correspondent").removeClass("sectionActive");
-	// }
-// }
+function updateSectionCorrespondent() {
+	$("#partner").val().trim()) {
+		$("#section-correspondent").addClass("sectionActive");
+	}
+	else {
+		$("#section-correspondent").removeClass("sectionActive");
+	}
+}
 
 //Ajax call to query_partners.php
 //The returned array builds the autocomplete list for the names field
