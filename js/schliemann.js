@@ -50,7 +50,7 @@ function updateSectionDate() {
 
 //Update the dates section after query parameters have been changed
 function updateSectionCorrespondent() {
-	$("#partner").val().trim()) {
+	if($("#partner").val().trim()) {
 		$("#section-correspondent").addClass("sectionActive");
 	}
 	else {
@@ -289,10 +289,15 @@ $(function() {
 
 	//The correspondent's name:
 	//autocompletion
-	$("#partner").autocomplete({
+	$("#partner")
+	.change(function() {
+		updateSectionCorrespondent();
+	})
+	.autocomplete({
 		source: queryPartners,
 		delay: 300,
 		close: function(event, ui) {
+			updateSectionCorrespondent();
 			updateSearch();
 			queryCopybook();
 			queryBox();
