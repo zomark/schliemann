@@ -50,7 +50,7 @@ function updateSectionDate() {
 
 //Update the dates section after query parameters have been changed
 function updateSectionCorrespondent() {
-	if($("#partner").val().trim().length) {
+	if($("#partner").val().trim().length || $("input[name='letterType']:checked").val() != "both") {
 		$("#section-correspondent").addClass("sectionActive");
 	}
 	else {
@@ -646,6 +646,7 @@ $(function() {
 				$("#copybook").fadeOut();
 				$("#copybook select").val("0");
 		}
+		updateSectionCorrespondent();
 		updateSearch();
 	});
 	
