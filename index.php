@@ -60,7 +60,7 @@ if(!$user) {
 				<!-- Input controls -->
 				<div class="query">
 					<!-- Date range -->
-					<div class="section dates">
+					<div id="section-dates" class="section dates">
 						<div class="date date_from">
 							<h3>Written between...</h3>
 							<input type="text" name ="date_from" id="date_from"/>
@@ -82,7 +82,7 @@ if(!$user) {
 					</div>
 
 					<!-- Correspondent -->
-					<div class="section">
+					<div id="section-correspondent" class="section">
 						<h3>Correspondent:</h3>
 						<div class="option">
 							<input type="text" name ="partner" id="partner"/>
@@ -115,7 +115,7 @@ if(!$user) {
 					</div>
 
 					<!-- Place -->
-					<div class="section">
+					<div id="section-place" class="section">
 						<h3>Place:</h3>
 						<div class="option">
 							<input type="text" name ="place" id="place"/>
@@ -126,7 +126,7 @@ if(!$user) {
 					</div>
 
 					<!-- Options -->
-					<div class="section" id="section_options">
+					<div id="section-options" class="section" id="section_options">
 						<h3>Options:</h3>
 						<input type="checkbox" name="check_digitized" id="check_digitized"/>
 						<label id="label_digitized" for="check_digitized">Available online</label>

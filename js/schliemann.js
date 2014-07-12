@@ -38,6 +38,16 @@ function updateSearch() {
 	}
 }
 
+//Update the dates section after query parameters have been changed
+function updateSectionDates() {
+	if($("#date_from").datepicker("getDate") || $("#date_to").datepicker("getDate")) {
+		$("#section-dates").addClass("sectionActive");
+	}
+	else {
+		$("#section-dates").removeClass("sectionActive");
+	}
+}
+
 //Ajax call to query_partners.php
 //The returned array builds the autocomplete list for the names field
 function queryPartners(request, callback) {
@@ -278,11 +288,8 @@ $(function() {
 			queryBox();
 		}
 	})
-	.data("ui-autocomplete")._renderItem = renderItemWithCount; /*function(ul, item) {
-		return $("<li>")
-			.append("<div class=\"item_label\"><a>" + item.label + "</a></div><div class=\"item_count\"><span>" + item.count + "</span></div>")
-			.appendTo(ul);
-	};*/
+	.data("ui-autocomplete")._renderItem = renderItemWithCount; 
+
 	//Show/hide help
 	$("#partner").focus(function(e) {
 		showHelp("help-correspondant");
@@ -404,11 +411,13 @@ $(function() {
 			if(to) {
 				$("#slider_dates").slider("values", 1, convertSliderDate(to));
 			}
+			updateSectionDate();
 			updateSearch();
 			queryCopybook();
 			queryBox();
 		},
 		onClose: function() {
+			updateSectionDate();
 			updateSearch();
 		}
 
@@ -438,6 +447,7 @@ $(function() {
 			$("#date_to").datepicker("setDate", from);
 			$("#slider_dates").slider("values", 1, convertSliderDate(from));
 		}
+		updateSectionDate();
 		updateSearch();
 		queryCopybook();
 		queryBox();
@@ -453,6 +463,7 @@ $(function() {
 	.click(function() {
 		$("#date_from").val("");
 		$("#slider_dates").slider("values", 0, 0);
+		updateSectionDate();
 		updateSearch();
 		queryCopybook();
 		queryBox();
@@ -489,11 +500,13 @@ $(function() {
 				$("#slider_dates").slider("values", 0, convertSliderDate(from));
 			}
 			$("#slider_dates").slider("values", 1, convertSliderDate(to));
+			updateSectionDate();
 			updateSearch();
 			queryCopybook();
 			queryBox();
 		},
 		onClose: function() {
+			updateSectionDate();
 			updateSearch();
 		}
 	});
@@ -523,6 +536,7 @@ $(function() {
 			$("#date_from").datepicker("setDate", to);
 			$("#slider_dates").slider("values", 0, convertSliderDate(to));
 		}
+		updateSectionDate();
 		updateSearch();
 		queryCopybook();
 		queryBox();
@@ -538,6 +552,7 @@ $(function() {
 	.click(function() {
 		$("#date_to").val("");
 		$("#slider_dates").slider("values", 1, SLIDER_MAX);
+		updateSectionDate();
 		updateSearch();
 		queryCopybook();
 		queryBox();
@@ -550,6 +565,7 @@ $(function() {
 			to = $("#date_to").datepicker("getDate");
 			$("#slider_dates").slider("values", 0, convertSliderDate(from));
 			$("#slider_dates").slider("values", 1, convertSliderDate(to));
+			updateSectionDate();
 		})
 		.focus(function(e) {
 			showHelp("help-dates");
@@ -581,6 +597,7 @@ $(function() {
 			$("#date_to").datepicker("option", "minDate", from);
 			$("#date_from").datepicker("setDate", from);
 			$("#date_to").datepicker("setDate", to);
+			updateSectionDate();
 			updateSearch();
 			queryCopybook();
 			queryBox();
