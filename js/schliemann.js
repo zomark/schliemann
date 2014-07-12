@@ -316,7 +316,7 @@ $(function() {
 		text: false
 	});
 
-	$("reset-dates").click(function() {
+	$("#reset-dates").click(function() {
 		$("#date_from").val("");
 		$("#date_to").val("");
 		$("#slider_dates").slider("values", 0, 0);
@@ -326,7 +326,7 @@ $(function() {
 		queryBox();
 	});
 
-	$("reset-correspondent").click(function() {
+	$("#reset-correspondent").click(function() {
 		$("#partner").val("");
 		$("#partner").focus();
 		$("#letterType_both").prop("checked", true);
@@ -334,14 +334,14 @@ $(function() {
 		updateSearch();
 	});
 
-	$("reset-place").click(function() {
+	$("#reset-place").click(function() {
 		$("#place").val("");
 		$("#place").focus();
 		updateSectionPlace();
 		updateSearch();
 	});
 
-	$("reset-options").click(function() {
+	$("#reset-options").click(function() {
 		$("#check_digitized").prop("checked", false);
 		updateSectionOptions();
 		updateSearch();

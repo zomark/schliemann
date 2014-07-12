@@ -50,6 +50,10 @@
 	float: left;
 }
 
+#section-options {
+	margin-right: 0px;
+}
+
 .sectionActive {
 	background-color: #D5D6BA;
 }
