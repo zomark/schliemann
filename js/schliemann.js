@@ -320,6 +320,7 @@ $(function() {
 		$("#date_from").val("");
 		$("#date_to").val("");
 		$("#slider_dates").slider("values", 0, 0);
+		$("#slider_dates").slider("values", 1, SLIDER_MAX);
 		updateSectionDate();
 		updateSearch();
 		queryCopybook();
