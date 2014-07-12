@@ -87,7 +87,7 @@ if(!$user) {
 
 					<!-- Correspondent -->
 					<div id="section-correspondent" class="section">
-						<button id="reset-correnspondent" class="button-reset">Reset</button>
+						<button id="reset-correspondent" class="button-reset">Reset</button>
 						<div class="section-contents">
 							<h3>Correspondent:</h3>
 							<div class="option">
