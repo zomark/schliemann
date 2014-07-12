@@ -68,6 +68,16 @@ function updateSectionPlace() {
 	}
 }
 
+//Update the dates section after query parameters have been changed
+function updateSectionOptions() {
+	if($("#check_digitized").is(':checked')) {
+		$("#section-options").addClass("sectionActive");
+	}
+	else {
+		$("#section-options").removeClass("sectionActive");
+	}
+}
+
 
 //Ajax call to query_partners.php
 //The returned array builds the autocomplete list for the names field
@@ -645,12 +655,14 @@ $(function() {
 		switch(checked) {
 			case "in":
 				queryBox();
+				$(".location").fadeIn();
 				$("#box").fadeIn();
 				$("#copybook select").val("0");
 				$("#copybook").hide();
 				break;
 			case "out":
 				queryCopybook();
+				$(".location").fadeIn();
 				$("#box").hide();
 				$("#box select").val("0");
 				$("#copybook").fadeIn();
@@ -660,6 +672,7 @@ $(function() {
 				$("#box select").val("0");
 				$("#copybook").fadeOut();
 				$("#copybook select").val("0");
+				$(".location").fadeOut();
 		}
 		updateSectionCorrespondent();
 		updateSearch();
@@ -680,6 +693,7 @@ $(function() {
 	//Buttonize options
 	$("#section-options").buttonset();
 	$("#check_digitized").click(function() {
+		updateSectionOptions();
 		updateSearch();
 		queryCopybook();
 		queryBox();
