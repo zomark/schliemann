@@ -40,10 +40,13 @@ function updateSearch() {
 
 //Update the dates section after query parameters have been changed
 function updateSectionDates() {
+	alert("updateSectionDates called");
 	if($("#date_from").datepicker("getDate") || $("#date_to").datepicker("getDate")) {
+		alert("sectionActive");
 		$("#section-dates").addClass("sectionActive");
 	}
 	else {
+		alert("sectionInactive");
 		$("#section-dates").removeClass("sectionActive");
 	}
 }
