@@ -39,6 +39,7 @@
 .section {
 	clear: both;
 	margin-top: 2em;
+	padding: 8px;
 }
 .section h3 {
 	margin-left: 0;
@@ -46,7 +47,7 @@
 }
 
 .sectionActive {
-	background-color: #AAAAFF;
+	background-color: #D5D6BA;
 }
 
 #partner, #place {
