@@ -223,7 +223,8 @@ function query_details(link) {
 		success: function(data) {
 			//Expand details
 			var id = $(this).attr("id");
-			var row = $(this).closest("tr").after("<tr class='itemDetails'><td colspan='6'>" + data + "</tr>");
+			var row = $("<tr class='itemDetails'><td colspan='6'>" + data + "</tr>");
+			$(this).closest("tr").after(row);
 			//Zoomple
 			$(row).find(".thumbnails a").zoomple();
 			//Setup link
