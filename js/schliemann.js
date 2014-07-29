@@ -226,11 +226,11 @@ function query_details(link) {
 			var row = $("<tr class='itemDetails'><td colspan='6'>" + data + "</tr>");
 			$(this).closest("tr").after(row);
 			//Zoomple
-			$(row).find(".thumbnails a").zoomple({
+			/*$(row).find(".thumbnails a").zoomple({
 					offset: {x: -20, y: -20},
 					loaderURL: "css/images/loader.gif",
 					blankUrl: "css/images/blank.gif"
-			});
+			});*/
 			//Setup link
 			$(this).off("click");
 			$(this).click(function() {
