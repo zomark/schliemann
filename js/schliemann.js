@@ -319,6 +319,8 @@ $(function() {
 	$("#reset-dates").click(function() {
 		$("#date_from").val("");
 		$("#date_to").val("");
+		$("#date_to").datepicker("option", "minDate", "30 March 1841");
+		$("#date_from").datepicker("option", "maxDate", "10 December 1891");
 		$("#slider_dates").slider("values", 0, 0);
 		$("#slider_dates").slider("values", 1, SLIDER_MAX);
 		updateSectionDate();
