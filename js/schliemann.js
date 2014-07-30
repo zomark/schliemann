@@ -226,7 +226,7 @@ function query_details(link) {
 			var row = $("<tr class='itemDetails'><td colspan='6'>" + data + "</tr>");
 			$(this).closest("tr").after(row);
 			//Zoom
-			$(row).find(".thumbnails a").jqzoom({
+			$(row).find(".thumbnails a").jqzoom(); /*{
 				zoomType: 'standard',
                 lens: true,  
                 preloadImages: false,  
@@ -236,12 +236,7 @@ function query_details(link) {
                 xOffset: 90,  
                 yOffset: 30,  
                 position: 'left'
-			});
-			/*$(row).find(".thumbnails a").zoomple({
-					offset: {x: -20, y: -20},
-					loaderURL: "css/images/loader.gif",
-					blankUrl: "css/images/blank.gif"
-			});*/
+			}); */
 			//Setup link
 			$(this).off("click");
 			$(this).click(function() {
