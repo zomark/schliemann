@@ -228,9 +228,8 @@ function query_details(link) {
 			//Zoom
 			$(row).find(".thumbnails a").jqzoom({
 				zoomType: 'standard',
-				title: null,
                 lens: true,  
-                preloadImages: true,  
+                preloadImages: false,  
                 alwaysOn: false,  
                 zoomWidth: 300,  
                 zoomHeight: 200,  
