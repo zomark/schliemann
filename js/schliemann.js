@@ -225,7 +225,19 @@ function query_details(link) {
 			var id = $(this).attr("id");
 			var row = $("<tr class='itemDetails'><td colspan='6'>" + data + "</tr>");
 			$(this).closest("tr").after(row);
-			//Zoomple
+			//Zoom
+			$(row).find(".thumbnails a").jqzoom({
+				zoomType: 'standard',
+				title: null,
+                lens: true,  
+                preloadImages: true,  
+                alwaysOn: false,  
+                zoomWidth: 300,  
+                zoomHeight: 200,  
+                xOffset: 90,  
+                yOffset: 30,  
+                position: 'left'
+			});
 			/*$(row).find(".thumbnails a").zoomple({
 					offset: {x: -20, y: -20},
 					loaderURL: "css/images/loader.gif",

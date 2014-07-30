@@ -15,8 +15,9 @@ if(!$user) {
 	<link href='http://fonts.googleapis.com/css?family=Marcellus+SC' rel='stylesheet' type='text/css'/>
 	<!-- jqueryui styles -->
 	<link href="css/custom-theme/jquery-ui-1.10.4.custom.min.css" rel="stylesheet"/>
-	<!-- zoomple styles -->
-	<link href="css/zoomple.css" rel="stylesheet"/>
+	<!-- zoom styles -->
+	<link rel="stylesheet" type="text/css" href="css/jquery.jqzoom.css">
+	<!--link href="css/zoomple.css" rel="stylesheet"/-->
 	<!-- ASCSA styles -->
 	<link href="http://www.ascsa.edu.gr/index.php?css=ascsa/site_css.v.1387875407" media="all" type="text/css" rel="stylesheet"/>
 	<!-- Local styles and overwrites -->
@@ -28,8 +29,9 @@ if(!$user) {
 	<script src="js/jquery-1.10.2.js"></script>
 	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
 	<script src="js/jquery.tablesorter.min.js"></script>
-	<!-- zoomple scripts -->
-	<script src="js/zoomple.js"></script>
+	<!-- zoom scripts -->
+	<script type="text/javascript" src="jquery.jqzoom-core.js"></script>
+	<!--script src="js/zoomple.js"></script-->
 	<!-- Local script, initializes and the jquery components and handles events -->
 	<script src="js/schliemann.js"></script>
 </head>
