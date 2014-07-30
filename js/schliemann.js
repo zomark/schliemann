@@ -226,7 +226,7 @@ function query_details(link) {
 			var row = $("<tr class='itemDetails'><td colspan='6'>" + data + "</tr>");
 			$(this).closest("tr").after(row);
 			//Zoom
-			//$(row).find(".thumbnails a").jqzoom(); /*{
+			/*$(row).find(".thumbnails a").jqzoom(); {
 				zoomType: 'standard',
                 lens: true,  
                 preloadImages: false,  
