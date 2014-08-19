@@ -80,7 +80,7 @@
 		<div class="middle">
 			<h1><?php echo $_GET["id"];?></h1>
 			<p>[Under construction]</p>
-			<div id="gallery" class="content">
+			<div id="gallery" class="gallery-content">
 				<div id="controls" class="controls"></div>
 				<div class="slideshow-container">
 					<div id="loading" class="loader"></div>
@@ -88,8 +88,8 @@
 				</div>
 				<div id="caption" class="caption-container"></div>
 			</div>
-			<div id="thumbs" class="navigation">
-				<ul class="thumbs noscript">
+			<div id="thumbs" class="gallery-navigation">
+				<ul class="gallery-thumbs noscript">
 <?php
 	if($resultMedia) {
 		$pagenum = 0;
@@ -104,10 +104,10 @@
 			$pathHires = "media/hires/$subfolder/$name.jpg";
 			//Write li element
 			echo "<li>";
-			echo "<a class=\"thumb\" name=\"$name\" href=\"$pathHires\" title=\"$pagenum\">";
+			echo "<a class=\"gallery-thumb\" name=\"$name\" href=\"$pathHires\" title=\"$pagenum\">";
 			echo "<img src=\"$pathThumb\" alt=\"$name\"/>";
 			echo "</a>";
-			echo "<div class=\"caption\">";
+			echo "<div class=\"gallery-caption\">";
 			echo "<div class=\"image-title\">$pagenum</div>";
 			echo "</div>";
 			echo "</li>";

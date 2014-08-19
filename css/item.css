@@ -1,14 +1,14 @@
 
-div.content {
+div.gallery-content {
     display: none;
     float: right;
     width: 550px;
 }
-div.content a, div.navigation a {
+div.gallery-content a, div.gallery-navigation a {
     color: #777;
     text-decoration: none;
 }
-div.content a:focus, div.content a:hover, div.content a:active {
+div.gallery-content a:focus, div.gallery-content a:hover, div.gallery-content a:active {
     text-decoration: underline;
 }
 div.controls {
@@ -30,7 +30,7 @@ div.slideshow-container {
     position: relative;
 }
 div.loader {
-    background-image: url("loader.gif");
+    background-image: url("images/zoomloader.gif");
     background-position: center center;
     background-repeat: no-repeat;
     height: 502px;
@@ -76,7 +76,7 @@ span.image-caption {
     top: 0;
     width: 550px;
 }
-div.caption {
+div.gallery-caption {
     padding: 12px;
 }
 div.image-title {
@@ -87,31 +87,31 @@ div.image-desc {
     line-height: 1.3em;
     padding-top: 12px;
 }
-div.navigation {
+div.gallery-navigation {
 }
-ul.thumbs {
+ul.gallery-thumbs {
     clear: both;
     margin: 0;
     padding: 0;
 }
-ul.thumbs li {
+ul.gallery-thumbs li {
     float: left;
     list-style: none outside none;
     margin: 5px 10px 5px 0;
     padding: 0;
 }
-a.thumb {
+a.gallery-thumb {
     border: 1px solid #ccc;
     display: block;
     padding: 2px;
 }
-ul.thumbs li.selected a.thumb {
+ul.gallery-thumbs li.selected a.gallery-thumb {
     background: none repeat scroll 0 0 #000;
 }
-a.thumb:focus {
+a.gallery-thumb:focus {
     outline: medium none;
 }
-ul.thumbs img {
+ul.gallery-thumbs img {
     border: medium none;
     display: block;
 	max-width: 100px;
@@ -120,11 +120,11 @@ ul.thumbs img {
 div.pagination {
     clear: both;
 }
-div.navigation div.top {
+div.gallery-navigation div.top {
     height: 11px;
     margin-bottom: 12px;
 }
-div.navigation div.bottom {
+div.gallery-navigation div.bottom {
     margin-top: 12px;
 }
 div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
