@@ -46,7 +46,7 @@
 	<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
 	<script src="js/jquery.tablesorter.min.js"></script>
 	<!-- gallery scripts -->
-	<script src="js/jquery.gallerific.js"></script>
+	<script src="js/jquery.galleriffic.js"></script>
 	<script src="js/jquery.opacityrollover.js"></script>
 	<!-- zoom scripts -->
 	<!--script type="text/javascript" src="jquery.jqzoom-core.js"></script-->
