@@ -88,17 +88,24 @@ div.image-desc {
     padding-top: 12px;
 }
 div#thumbs.navigation {
+	line-height: normal;
+	z-index: auto;
 }
 ul.thumbs {
     clear: both;
     margin: 0;
     padding: 0;
+	height: auto;
+	position: static;
+	top: 0;
 }
 ul.thumbs li {
     float: left;
     list-style: none outside none;
     margin: 5px 10px 5px 0;
     padding: 0;
+	position: static;
+	width: auto;
 }
 a.thumb {
     border: 1px solid #ccc;
