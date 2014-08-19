@@ -49,7 +49,7 @@
 	<!--script type="text/javascript" src="jquery.jqzoom-core.js"></script-->
 	<!--script src="js/zoomple.js"></script-->
 	<!-- Local script, initializes and the jquery components and handles events -->
-	<script src="js/schliemann_item.js"></script>
+	<script src="js/schliemann-item.js"></script>
 </head>
 <body>
 	<div class="container">
