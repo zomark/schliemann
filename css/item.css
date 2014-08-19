@@ -76,7 +76,7 @@ span.image-caption {
     top: 0;
     width: 550px;
 }
-div.gallery-caption {
+div.caption {
     padding: 12px;
 }
 div.image-title {
@@ -89,29 +89,29 @@ div.image-desc {
 }
 div.gallery-navigation {
 }
-ul.gallery-thumbs {
+ul.thumbs {
     clear: both;
     margin: 0;
     padding: 0;
 }
-ul.gallery-thumbs li {
+ul.thumbs li {
     float: left;
     list-style: none outside none;
     margin: 5px 10px 5px 0;
     padding: 0;
 }
-a.gallery-thumb {
+a.thumb {
     border: 1px solid #ccc;
     display: block;
     padding: 2px;
 }
-ul.gallery-thumbs li.selected a.gallery-thumb {
+ul.thumbs li.selected a.thumb {
     background: none repeat scroll 0 0 #000;
 }
-a.gallery-thumb:focus {
+a.thumb:focus {
     outline: medium none;
 }
-ul.gallery-thumbs img {
+ul.thumbs img {
     border: medium none;
     display: block;
 	max-width: 100px;

@@ -89,7 +89,7 @@
 				<div id="caption" class="caption-container"></div>
 			</div>
 			<div id="thumbs" class="gallery-navigation">
-				<ul class="gallery-thumbs noscript">
+				<ul class="thumbs noscript">
 <?php
 	if($resultMedia) {
 		$pagenum = 0;
@@ -104,7 +104,7 @@
 			$pathHires = "media/hires/$subfolder/$name.jpg";
 			//Write li element
 			echo "<li>";
-			echo "<a class=\"gallery-thumb\" name=\"$name\" href=\"$pathHires\" title=\"$pagenum\">";
+			echo "<a class=\"thumb\" name=\"$name\" href=\"$pathHires\" title=\"$pagenum\">";
 			echo "<img src=\"$pathThumb\" alt=\"$name\"/>";
 			echo "</a>";
 			echo "<div class=\"gallery-caption\">";
