@@ -1,14 +1,14 @@
 
-#gallery div.content {
+div#gallery.content {
     display: none;
     float: right;
     width: 550px;
 }
-#gallery div.content a, #thumbs div.navigation a {
+div#gallery.content a, div#thumbs.navigation a {
     color: #777;
     text-decoration: none;
 }
-#gallery div.content a:focus, #gallery div.content a:hover, #gallery div.content a:active {
+div#gallery.content a:focus, div#gallery.content a:hover, div#gallery.content a:active {
     text-decoration: underline;
 }
 div.controls {
@@ -87,7 +87,7 @@ div.image-desc {
     line-height: 1.3em;
     padding-top: 12px;
 }
-#thumbs div.navigation {
+div#thumbs.navigation {
 }
 ul.thumbs {
     clear: both;
