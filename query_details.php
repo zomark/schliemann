@@ -24,7 +24,7 @@
 					."and p.id = items.place_id "
 					."and items.id = ".$_GET["id"];
 				
-			$sqlMedia = "select name, type "
+			$sqlMedia = "select name, type, items_id "
 					."from media "
 					."where items_id = ".$_GET["id"];
 			
