@@ -2,7 +2,7 @@
 div#gallery.content {
     display: none;
     float: right;
-    width: 550px;
+    width: 500px;
 }
 div#gallery.content a, div#thumbs.navigation a {
     color: #777;
@@ -37,7 +37,7 @@ div.loader {
     left: 0;
     position: absolute;
     top: 0;
-    width: 550px;
+    width: 500px;
 }
 div.slideshow {
 }
@@ -52,7 +52,7 @@ div.slideshow a.advance-link {
     height: 502px;
     line-height: 502px;
     text-align: center;
-    width: 550px;
+    width: 500px;
 }
 div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
     text-decoration: none;
@@ -60,6 +60,7 @@ div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.sli
 div.slideshow img {
     border: 1px solid #ccc;
     vertical-align: middle;
+	max-width: 480px;
 }
 div.download {
     float: right;
@@ -74,7 +75,7 @@ span.image-caption {
     left: 0;
     position: absolute;
     top: 0;
-    width: 550px;
+    width: 500px;
 }
 div.caption {
     padding: 12px;
