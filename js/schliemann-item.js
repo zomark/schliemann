@@ -20,7 +20,7 @@ $(function() {
 		delay:                     2500,
 		numThumbs:                 15,
 		preloadAhead:              10,
-		enableTopPager:            true,
+		enableTopPager:            false,
 		enableBottomPager:         true,
 		maxPagesToShow:            7,
 		imageContainerSel:         '#slideshow',

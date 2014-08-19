@@ -91,6 +91,7 @@ div.image-desc {
 div#thumbs.navigation {
 	line-height: normal;
 	z-index: auto;
+	margin-left: 12px;
 }
 ul.thumbs {
     clear: both;
