@@ -46,12 +46,9 @@
 
 				$resultMedia = $db->query($sqlMedia);
 				if($resultMedia) {
-					$resultMedia = $db->query($sqlMedia);
-					if($resultMedia) {
-						echo "<div class=\"thumbnails\">"
+					echo "<div class=\"thumbnails\">"
 						.media_render_thumbnails($resultMedia)
 						."</div>";
-					}
 					$resultMedia->closeCursor();
 				}
 			} 

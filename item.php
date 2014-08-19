@@ -1,9 +1,24 @@
 <?php
-require 'authenticate.php';
-$user = sc_get_user($_SERVER);
-if(!$user) {
-	die("Authentication failed");
-}
+	header('Content-Type: text/html');
+	require 'authenticate.php';
+	require 'dbpdo.php';
+	$user = sc_get_user($_SERVER);
+	if(!$user) {
+		die("Authentication failed");
+	}
+	try {
+		$db = new MyDB();
+		if(!$db){
+			echo "<p>".$db->lastErrorMsg()."</p>";
+		} 
+		$sqlMedia = "select name, type, items_id "
+			."from media "
+			."where items_id = ".$_GET["id"];
+		$resultMedia = $db->query($sqlMedia);
+	}
+	catch(Exception $e) {
+		echo "<p>Error:".$e->getMessage()."</p>";
+	}
 ?>
 
 <!doctype html>
@@ -22,6 +37,7 @@ if(!$user) {
 	<link href="http://www.ascsa.edu.gr/index.php?css=ascsa/site_css.v.1387875407" media="all" type="text/css" rel="stylesheet"/>
 	<!-- Local styles and overwrites -->
 	<link href="css/main.css" rel="stylesheet"/>
+	<link href="css/item.css" rel="stylesheet"/>
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -61,6 +77,43 @@ if(!$user) {
 		<div class="middle">
 			<h1><?php echo $_GET["id"];?></h1>
 			<p>[Under construction]</p>
+			<div id="gallery" class="content">
+				<div id="controls" class="controls"></div>
+				<div class="slideshow-container">
+					<div id="loading" class="loader"></div>
+					<div id="slideshow" class="slideshow"></div>
+				</div>
+				<div id="caption" class="caption-container"></div>
+			</div>
+			<div id="thumbs" class="navigation">
+				<ul class="thumbs noscript">
+<?php
+	if($resultMedia) {
+		$pagenum = 0;
+		foreach($resultMedia as $row) {
+			$name = $row[0];
+			$pagenum++;
+			//Derive subfolder from filename
+			$subfolder = implode("-", array_slice(explode("-", $name), 0, -1));
+			//Filename
+			$pathThumb = dirname(__FILE__)."/media/thumbnails/$subfolder/$name.jpg";
+			//Hires filename
+			$pathHires = dirname(__FILE__)."/media/hires/$subfolder/$name.jpg";
+			//Write li element
+			echo "<li>";
+			echo "<a class=\"thumb\" name=\"$name\" href=\"$pathHires\" title=\"$pagenum\">";
+			echo "<img src=\"$pathThumb\" alt=\"$name\"/>";
+			echo "</a>";
+			echo "<div class=\"caption\">";
+			echo "<div class=\"image-title\">$pagenum</div>";
+			echo "</div>";
+			echo "</li>";
+		}
+		$resultMedia->closeCursor();
+	}
+?>
+				</ul>
+			</div>
 		</div>
 		<div class="footer">
 		</div>
