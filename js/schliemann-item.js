@@ -41,7 +41,7 @@ $(function() {
 		defaultTransitionDuration: 900,
 		onSlideChange:             function(prevIndex, nextIndex) {
 			// 'this' refers to the gallery, which is an extension of $('#thumbs')
-			this.find('ul.gallery-thumbs').children()
+			this.find('ul.thumbs').children()
 				.eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
 				.eq(nextIndex).fadeTo('fast', 1.0);
 		},
