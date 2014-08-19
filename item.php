@@ -78,8 +78,7 @@
 		
 		<!-- Main contents -->
 		<div class="middle">
-			<h1><?php echo $_GET["id"];?></h1>
-			<p>[Under construction]</p>
+			<!--h1><!--?php echo $_GET["id"];?--><!--/h1-->
 			<div id="gallery" class="content">
 				<div id="controls" class="controls"></div>
 				<div class="slideshow-container">
