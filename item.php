@@ -80,7 +80,7 @@
 		<div class="middle">
 			<h1><?php echo $_GET["id"];?></h1>
 			<p>[Under construction]</p>
-			<div id="gallery" class="gallery-content">
+			<div id="gallery" class="content">
 				<div id="controls" class="controls"></div>
 				<div class="slideshow-container">
 					<div id="loading" class="loader"></div>
@@ -88,7 +88,7 @@
 				</div>
 				<div id="caption" class="caption-container"></div>
 			</div>
-			<div id="thumbs" class="gallery-navigation">
+			<div id="thumbs" class="navigation">
 				<ul class="thumbs noscript">
 <?php
 	if($resultMedia) {
@@ -107,7 +107,7 @@
 			echo "<a class=\"thumb\" name=\"$name\" href=\"$pathHires\" title=\"$pagenum\">";
 			echo "<img src=\"$pathThumb\" alt=\"$name\"/>";
 			echo "</a>";
-			echo "<div class=\"gallery-caption\">";
+			echo "<div class=\"caption\">";
 			echo "<div class=\"image-title\">$pagenum</div>";
 			echo "</div>";
 			echo "</li>";
