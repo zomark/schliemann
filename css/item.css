@@ -1,14 +1,14 @@
 
-div.gallery-content {
+#gallery div.content {
     display: none;
     float: right;
     width: 550px;
 }
-div.gallery-content a, div.gallery-navigation a {
+#gallery div.content a, #thumbs div.navigation a {
     color: #777;
     text-decoration: none;
 }
-div.gallery-content a:focus, div.gallery-content a:hover, div.gallery-content a:active {
+#gallery div.content a:focus, #gallery div.content a:hover, #gallery div.content a:active {
     text-decoration: underline;
 }
 div.controls {
@@ -87,7 +87,7 @@ div.image-desc {
     line-height: 1.3em;
     padding-top: 12px;
 }
-div.gallery-navigation {
+#thumbs div.navigation {
 }
 ul.thumbs {
     clear: both;
@@ -120,11 +120,11 @@ ul.thumbs img {
 div.pagination {
     clear: both;
 }
-div.gallery-navigation div.top {
+div.navigation div.top {
     height: 11px;
     margin-bottom: 12px;
 }
-div.gallery-navigation div.bottom {
+div.navigation div.bottom {
     margin-top: 12px;
 }
 div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
