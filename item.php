@@ -96,9 +96,9 @@
 			//Derive subfolder from filename
 			$subfolder = implode("-", array_slice(explode("-", $name), 0, -1));
 			//Filename
-			$pathThumb = dirname(__FILE__)."/media/thumbnails/$subfolder/$name.jpg";
+			$pathThumb = "media/thumbnails/$subfolder/$name.jpg";
 			//Hires filename
-			$pathHires = dirname(__FILE__)."/media/hires/$subfolder/$name.jpg";
+			$pathHires = "media/hires/$subfolder/$name.jpg";
 			//Write li element
 			echo "<li>";
 			echo "<a class=\"thumb\" name=\"$name\" href=\"$pathHires\" title=\"$pagenum\">";
