@@ -52,7 +52,7 @@ function media_render_jpeg_thumbnail($name, $item_id, $pagenum) {
 		$hiresExists = is_readable($pathHires);
 		if($hiresExists) {
 //			$retval .= "<a href=\"media/hires/$subfolder/$name.jpg\">";
-			$retval .= "<a href=\"item.php?id=$item_id&pagenum=$pagenum\">";
+			$retval .= "<a target=\"_blank\" href=\"item.php?id=$item_id&pagenum=$pagenum\">";
 		}
 		$retval .= "<img title=\"Page $pagenum\" class=\"thumbnail\" src=\"media/thumbnails/$subfolder/$name.jpg\" alt=\"$name\"/>";
 		if($hiresExists) {
