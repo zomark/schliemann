@@ -55,9 +55,7 @@
 				$result = $db->query($sql);
 				foreach($result as $row) {
 					$readme = <<<EOT
-#$row[1]
-$row[4] to $row[5]
-$row[6] $row[3]
+#$row[1]\r\n$row[4] to $row[5]\r\n$row[6] $row[3]\r\n
 EOT;
 					$zip->addFromString("Readme.txt", $readme);
 				}
