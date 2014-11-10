@@ -224,19 +224,13 @@ function query_details(link) {
 			//Expand details
 			var id = $(this).attr("id");
 			var row = $("<tr class='itemDetails'><td colspan='6'>" + data + "</tr>");
+			//Setup download link
+			var href = "download_item_media.php?id=" + id;
+			row.find(".media_download").attr("href", href).button();
+//				.attr("href", href)
+//				.button("enable");
+			//Add to table
 			$(this).closest("tr").after(row);
-			//Zoom
-			/*$(row).find(".thumbnails a").jqzoom(); {
-				zoomType: 'standard',
-                lens: true,  
-                preloadImages: false,  
-                alwaysOn: false,  
-                zoomWidth: 300,  
-                zoomHeight: 200,  
-                xOffset: 90,  
-                yOffset: 30,  
-                position: 'left'
-			}); */
 			//Setup link
 			$(this).off("click");
 			$(this).click(function() {
