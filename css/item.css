@@ -61,6 +61,7 @@ div.slideshow img {
     border: 1px solid #ccc;
     vertical-align: top;
 	max-width: 480px;
+	max-height: 502px;
 }
 div.download {
     float: right;
@@ -91,6 +92,7 @@ div.image-desc {
 div#thumbs.navigation {
 	line-height: normal;
 	z-index: auto;
+	margin-top: 10px;
 	margin-left: 12px;
 }
 ul.thumbs {

@@ -53,6 +53,11 @@
 	<!--script src="js/zoomple.js"></script-->
 	<!-- Local script, initializes and the jquery components and handles events -->
 	<script src="js/schliemann-item.js"></script>
+	<script>
+		$(function() {
+			$(".media_download").button();
+		});
+	</script>
 </head>
 <body>
 	<div class="container">
@@ -88,6 +93,10 @@
 				<div id="caption" class="caption-container"></div>
 			</div>
 			<div id="thumbs" class="navigation">
+<?php
+				echo "<div class=\"media_download_container\"><a class=\"media_download\" href=\"download_item_media.php?id="
+					.$_GET["id"]."\">Download ZIP</a></div>";
+?>
 				<ul class="thumbs noscript">
 <?php
 	if($resultMedia) {
@@ -116,6 +125,7 @@
 ?>
 				</ul>
 			</div>
+			<div style="clear: both;"></div>
 		</div>
 		<div class="footer">
 		</div>
